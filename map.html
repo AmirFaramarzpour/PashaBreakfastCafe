@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Socials - Fahrenheit Café</title>
+    <!-- Include Font Awesome CDN for social icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #030f46; /* Changed background color to white */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        header img {
+            margin-right: 10px; /* Space between the logo and text */
+            max-width: 100px;
+        }
+        footer {
+            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px; /* Reduced padding */
+        }
+        .map-container {
+            width: 90%;
+            height: 30vh;
+            margin: 10px auto; /* Reduced margin */
+            border-radius: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+        .contact-us, .follow-us {
+            margin: 10px 0; /* Reduced margin */
+        }
+        .contact-us h2, .follow-us h2 {
+            margin-bottom: 5px; /* Reduced margin */
+            color: #858383;
+        }
+        .phone {
+            font-size: 1.0em;
+            color: #fff5f5c8;
+            text-decoration: none;
+            display: inline-flex; /* Use inline-flex for better fitting */
+            align-items: center; /* Ensure vertical alignment */
+            justify-content: center; /* Center the content horizontally */
+            margin: 5px 0; /* Reduced margin */
+            padding: 5px 10px; /* Added padding to fit content */
+            border: 3px solid #ffffff; /* Changed border size to 3px */
+            border-radius: 12px;
+            line-height: 1.2; /* Ensures the text height fits well within the border */
+            transition: all 0.3s ease;
+            width: auto; /* Automatically adjusts width to fit content */
+        }
+
+
+        .phone:hover {
+            background-color: #333;
+            color: white;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0; /* Reduced margin */
+        }
+        .social-icons a {
+            color: #800909;
+            text-decoration: none;
+            margin: 0 5px; /* Reduced margin */
+            font-size: 3rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f87140;
+        }
+        @media (max-width: 600px) {
+            .map-container {
+                width: 100%;
+            }
+            .phone {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .social-icons {
+                flex-direction: row; /* Ensure icons are in a row on smaller screens */
+            }
+            .social-icons a {
+                margin: 5px 5px; /* Adjusted margin for smaller screens */
+            }
+        }
+        footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+            .work-hours {
+                background-color: #ffffff; /* White background */
+                color: #333; /* Dark text color */
+                padding: 10px; /* Padding around the text */
+                border: 1px solid #ddd; /* Light border */
+                border-radius: 5px; /* Rounded corners */
+                text-align: center; /* Centered text */
+                margin: 0 auto; /* Centered and spaced from other elements */
+                width: fit-content; /* Adjust the width to fit the content */
+            }
+
+            .work-hours h2 {
+                margin: 0 0 10px 0; /* Margin for the heading */
+                font-size: 1.5em; /* Larger font size for the heading */
+            }
+
+            .work-hours p {
+                margin: 5px 0; /* Margin for the paragraphs */
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/logo.png?updatedAt=1735419450707" alt="Logo">
+        Contact & Socials
+    </header>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19534806.780654795!2d27.11246597494093!3d53.29634236596358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f853f002921264b%3A0xb392206baf1f6ab0!2z2qnYp9mB2Ycg2LXYqNit2KfZhtmHINm-2KfYtNin!5e0!3m2!1sen!2sru!4v1735424747048!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="work-hours">
+        <p>8:00 AM - 5:00 PM</p>
+    </div>
+    
+    <div class="content">
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <a href="tel:+989111563237" class="phone">+98 911 156 3237</a>
+            <a href="tel:+989115117291" class="phone">+98 911 511 7291</a>
+        </div>
+        <div class="follow-us">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/breakfast_pasha" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 Pasha Business Group | Design: <a href="https://wa.me/+989116812737" target="_blank" style="color: white; text-decoration: underline;">Amir</a>
+    </footer>
+</body>
+</html>

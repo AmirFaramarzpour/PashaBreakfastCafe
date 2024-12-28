@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasha Breakfast Cafe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/Delicious%20Brunch%20Food%20Ideas.jpg?updatedAt=1735422032392') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(to right, rgba(20, 29, 47, 0.502), rgba(36, 59, 85, 0.502)); /* Increased transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        header img {
+            margin-right: 10px; /* Space between the logo and text */
+            max-width: 100px;
+        }
+        footer {
+            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px; /* Adjusted max-width for full text visibility */
+            font-size: 1.2em;
+            padding: 20px;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        nav {
+            margin: auto 0 60px 0; /* Adjust this margin to move buttons higher above the footer */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav a {
+            font-family: 'Roboto', sans-serif;
+            margin: 3px 0;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.712);
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 120px;
+            font-size: 1.2em;
+            text-align: center; /* Center the text */
+            border-radius: 12em;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+        footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/logo.png?updatedAt=1735419450707" alt="Logo">
+        Pasha Breakfast Cafe
+    </header>
+    <div class="content">
+        <nav>
+            <a href="menu.html">Menu</a>
+            <a href="map.html">Contact</a>
+        </nav>
+    </div>
+    <footer>
+        © 2025 Pasha Business Group | Design: <a href="https://wa.me/+989116812737" target="_blank" style="color: white; text-decoration: underline;">Amir</a>
+    </footer>
+    
+</body>
+</html>

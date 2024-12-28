@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Pasha Breakfast Cafe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lateef&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/Delicious%20Brunch%20Food%20Ideas.jpg?updatedAt=1735422032392'); /* Placeholder for background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        header img {
+            margin-right: 10px; /* Space between the logo and text */
+            max-width: 100px;
+        }
+        footer {
+            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            margin-top: auto;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            width: 1000px; /* Fixed width */
+            margin: 0 auto;
+        }
+        .category-buttons {
+            position: fixed;
+            top: 50px; /* Adjust based on header height */
+            left: 20px; /* Align categories to the left */
+            max-width: 250px;
+            background: #2e50778e; /* Optional background for better readability */
+            border-radius: 5px;
+            padding: 10px;
+            height: calc(100% - 60px); /* Adjust based on header and footer height */
+            overflow-y: auto;
+            font-family: 'Lateef', sans-serif;
+            font-size: 1.2em;
+        }
+        .category-buttons button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px; /* Editable corner radius */
+            background-color: #4b5945;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s, opacity 0.3s, transform 0.3s;
+            opacity: 0.8;
+            font-family: 'Montserrat', sans-serif;            
+            font-size: 0.8em;
+
+        }
+        .category-buttons button span.persian {
+            font-family: 'Lateef', cursive; /* Apply Lateef font to Persian text */
+            font-size: 1.5em;
+        }
+        .category-buttons button:hover {
+            background-color: rgba(105, 105, 105, 0.8);
+            opacity: 1;
+            transform: scale(1.05); /* Added scale effect on hover */
+        }
+        .items {
+            flex: 3;
+            margin-left: 270px; /* Ensure it doesn't overlap with fixed category buttons */
+            overflow-y: auto;
+            max-height: calc(100vh - 100px); /* Adjust based on header and footer height */
+        }
+        .item {
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: calc(50% - 40px);
+            box-sizing: border-box;
+        }
+        .item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 100%; /* Full width for smaller screens */
+            }
+            .items {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+            }
+            .item {
+                width: 80%;
+            }
+            .category-buttons {
+                position: static;
+                max-width: 100%;
+                margin: 0 auto 20px;
+            }
+        }
+        footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/logo.png?updatedAt=1735419450707" alt="Logo"> <!-- Placeholder for logo image -->
+        Menu Items    
+    </header>
+    <div class="container">
+        <div class="category-buttons">
+            <button onclick="showItems('Category 1')">Omlet | <span class="persian">املت</span></button>
+            <button onclick="showItems('Category 2')">Nations | <span class="persian">ملل</span></button>
+            <button onclick="showItems('Category 3')">Salad | <span class="persian">سالاد</span></button>
+            <button onclick="showItems('Category 4')">Sandvich | <span class="persian">ساندویچ</span></button>
+            <button onclick="showItems('Category 5')">Food | <span class="persian">خوراک</span></button>
+            <button onclick="showItems('Category 6')">Drinks | <span class="persian">نوشیدنی‌ها</span></button>
+        </div>
+        <div class="items" id="items">
+            <!-- Items will be displayed here -->
+        </div>
+    </div>
+    <footer>
+        © 2025 Pasha Business Group | Design: <a href="https://wa.me/+989116812737" target="_blank" style="color: white; text-decoration: underline;">Amir</a>
+    </footer>
+    <script>
+        const itemsData = {
+            'Category 1': [
+                { name: 'bacon omlet', description: 'Bacon, sharp cheddar cheese, bell pepper, olive oil, eggs', price: '500 T', image: 'https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/Mushroom%20egg%20sandwich%20with%20Avocado.jpg?updatedAt=1735405667315' },
+                { name: 'Mushrooms and eggs', description: 'mushroom, eggs, vegtables', price: '450 T', image: 'https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/Quick%20and%20Easy%20Omelette%20Recipe.jpg?updatedAt=1735405678738' }
+            ],
+            'Category 2': [
+                { name: 'Item3', description: 'Item3 description', price: 'Item3 price', image: 'item3.jpg' },
+                { name: 'Item4', description: 'Item4 description', price: 'Item4 price', image: 'item4.jpg' }
+            ],
+            // Add more categories and items as needed
+        };
+
+        function showItems(category) {
+            const itemsContainer = document.getElementById('items');
+            itemsContainer.innerHTML = ''; // Clear previous items
+
+            if (itemsData[category]) {
+                itemsData[category].forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('item');
+
+                    const img = document.createElement('img');
+                    img.src = item.image;
+                    itemDiv.appendChild(img);
+
+                    const name = document.createElement('h3');
+                    name.innerText = item.name;
+                    itemDiv.appendChild(name);
+
+                    const description = document.createElement('p');
+                    description.innerText = item.description;
+                    itemDiv.appendChild(description);
+
+                    const price = document.createElement('p');
+                    price.innerText = item.price;
+                    itemDiv.appendChild(price);
+
+                    itemsContainer.appendChild(itemDiv);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
