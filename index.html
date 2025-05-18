@@ -6,6 +6,33 @@
     <title>Pasha Breakfast Cafe</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
 
     <style>
         body {
@@ -18,84 +45,79 @@
             min-height: 100vh;
         }
         header {
-            background: linear-gradient(to right, rgba(20, 29, 47, 0.502), rgba(36, 59, 85, 0.502)); /* Increased transparency */
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            font-size: 1.5em;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Montserrat', sans-serif;
+            gap: 10px;
+            background: linear-gradient(to right, rgba(20, 29, 47, 0.5), rgba(36, 59, 85, 0.5));
+            color: white;
+            padding: 15px;
+            font-family: 'Lalezar', cursive;
+            font-size: 32px;
+            width: 100%;
+            position: sticky;
+            top: 0;
         }
         header img {
-            margin-right: 10px; /* Space between the logo and text */
-            max-width: 100px;
-        }
-        footer {
-            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            font-size: 0.8em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
+            max-width: 80px;
         }
         .content {
-            flex: 1;
             display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 100vh; /* Ensures full height */
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 1000px; /* Adjusted max-width for full text visibility */
-            font-size: 1.2em;
-            padding: 20px;
-            box-sizing: border-box; /* Include padding in width calculation */
-        }
-        nav {
-            margin: auto 0 60px 0; /* Adjust this margin to move buttons higher above the footer */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-        }
-        nav a {
-            font-family: 'Roboto', sans-serif;
-            margin: 0px 0;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.712);
-            text-decoration: none;
-            color: #fff;
-            border-radius: 5px;
-            width: 80%;
-            max-width: 120px;
-            font-size: 1.2em;
-            text-align: center; /* Center the text */
-            border-radius: 12em;
         }
 
-        @media (max-width: 600px) {
-            nav a {
-                width: 80%;
-                margin: 3px auto;
-            }
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers buttons */
+            justify-content: center; /* Aligns vertically */
+            gap: 20px;
+            width: 100%;
+        }
+
+        nav a {
+            display: flex; /* Makes sure text aligns properly */
+            justify-content: center; /* Text inside button is centered */
+            align-items: center; /* Centers vertically */
+            width: 136px;
+            padding: 15px 25px;
+            background: #011614c8;
+            color: #f9f8f8e0;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Lalezar', cursive;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
         footer {
+            background: linear-gradient(to right, rgba(20, 29, 47, 0), rgba(36, 59, 85, 0));
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+            width: 100%;
             position: sticky;
             bottom: 0;
-            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <img src="https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/logo.png?updatedAt=1735419450707" alt="Logo">
-        Pasha Breakfast Cafe
+        <span>Pasha Breakfast Cafe</span>
     </header>
     <div class="content">
         <nav>
@@ -103,9 +125,6 @@
             <a href="map.html">Contact</a>
         </nav>
     </div>
-    <footer>
-        © 2025 Pasha Business Group | Design: <a href="http://amirfaramarzpour.ir/" target="_blank" style="color: white; text-decoration: underline;">Amir</a>
-    </footer>
-    
+    <footer>© 2025 Pasha Business Group | Design: <a href="http://amirfaramarzpour.ir/" target="_blank" style="color: white; text-decoration: underline;">AmirFaramarzpour</a></footer>
 </body>
 </html>
