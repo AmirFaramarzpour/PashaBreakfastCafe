@@ -11,13 +11,40 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('https://ik.imagekit.io/amirfaramarzpour/pasha_breakfast_cafe/photo_2024-12-30_15-38-55.jpg?updatedAt=1735560720605'); /* Placeholder for background image */
+            background-image: url(''); /* Placeholder for background image */
+            background-color: #011614;
             background-size: cover;
             background-position: center;
             display: flex;
@@ -25,16 +52,17 @@
             min-height: 100vh;
         }
         header {
-            background: linear-gradient(to right, rgb(20, 30, 48, 0.5), rgb(36, 59, 85, 0.5)); /* Increased transparency */
+            background: linear-gradient(to right, rgba(20, 30, 48, 0), rgba(36, 59, 85, 0)); /* Increased transparency */
             color: white;
             text-align: center;
             padding: 10px 0;
             position: relative;
-            font-size: 1.5em;
+            font-family: 'Lalezar', cursive;
+            font-size: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Montserrat', sans-serif;
+
         }
         header img {
             margin-right: 10px; /* Space between the logo and text */
@@ -71,8 +99,8 @@
         padding: 0px;
         height: calc(100% - 60px); /* Adjust based on header and footer height */
         overflow-y: auto;
-        font-family: 'Lateef', sans-serif;
-        font-size: 1.2em;
+        font-family: 'Lalezar', cursive;
+        font-size: 20px;
     }
     .category-buttons button {
         display: block;
@@ -86,12 +114,12 @@
         cursor: pointer;
         transition: background 0.3s, opacity 0.3s, transform 0.3s;
         opacity: 0.8;
-        font-family: 'Montserrat', sans-serif;            
-        font-size: 0.8em;
+        font-family: 'Lalezar', cursive;
+        font-size: 20px;
     }
     .category-buttons button span.persian {
-        font-family: 'Lateef', cursive; /* Apply Lateef font to Persian text */
-        font-size: 1.5em;
+        font-family: 'Lalezar', cursive;
+        font-size: 20px;
     }
     .category-buttons button:hover {
         background-color: rgba(105, 105, 105, 0.8);
@@ -105,16 +133,17 @@
         max-height: calc(100vh - 100px); /* Adjust based on header and footer height */
     }
     .item {
-        background-color: rgba(191, 180, 180, 0.801);
-        font-family: 'Lateef', sans-serif;
+        background-color: rgba(255, 255, 255, 0.897);
+        font-family: 'Lalezar', cursive;
+        font-size: 16px;
         margin: 10px;
         padding: 10px;
         border-radius: 5px;
         width: calc(50% - 40px);
         box-sizing: border-box;
-        color: #032815f4;
+        color: #080808f4;
         text-align: center;
-        font-size: 1.5em;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -124,7 +153,7 @@
     }
     .item p.price {
         margin: 5px 0; /* Compact margin */
-        font-size: 0.7em; /* Adjust font size for price */
+        font-size: 0.8em; /* Adjust font size for price */
         color: #011614; /* Slightly darker color for price */
         font-family: 'Merriweather', serif; /* Apply the Lora font */
     }
@@ -159,75 +188,92 @@
     </header>
     <div class="container">
         <div class="category-buttons">
-            <button onclick="showItems('Category 1')">Omelet | <span class="persian">املت</span></button>
-            <button onclick="showItems('Category 2')">Nations | <span class="persian">ملل</span></button>
-            <button onclick="showItems('Category 3')">Salad | <span class="persian">سالاد</span></button>
-            <button onclick="showItems('Category 4')">Sandvich | <span class="persian">ساندویچ</span></button>
-            <button onclick="showItems('Category 5')"><span class="persian">خوراک</span></button>
-            <button onclick="showItems('Category 6')">Drinks | <span class="persian">نوشیدنی‌ها</span></button>
+            <button onclick="showItems('Category 1')">Omelette | <span class="persian">املت</span></button>
+            <button onclick="showItems('Category 2')">Croissant | <span class="persian">کروسان</span></button>
+            <button onclick="showItems('Category 3')">Nations | <span class="persian">ملل</span></button>
+            <button onclick="showItems('Category 4')">Sandwich | <span class="persian">ساندویچ (پنینی)</span></button>
+            <button onclick="showItems('Category 5')">VIP <span class="persian">خوراک</span></button>
+            <button onclick="showItems('Category 6')">Salad | <span class="persian">سالاد</span></button>
+            <button onclick="showItems('Category 7')">Drinks | <span class="persian">نوشیدنی‌ها</span></button>
         </div>
         <div class="items" id="items">
             <!-- Items will be displayed here -->
         </div>
     </div>
     <div style="text-align: center; color: white; font-family: 'Lateef', cursive; font-size: 1.5em;">
-        <p>تمامی غذاها با دورچین مخصوص پاشا سرو می‌شود</p>
+        <p>⭐ تمامی غذاها با دورچین مخصوص پاشا سرو می‌شود ⭐</p>
     </div>
-    
-    <footer>
-        © 2025 Pasha Business Group | Design: <a href="http://amirfaramarzpour.ir/" target="_blank" style="color: white; text-decoration: underline;">Amir</a>
-    </footer>
+
     <script>
         const itemsData = {
             'Category 1': [
-                { name: 'املت گوجه', price: '153 T', image: '' },
-                { name: 'املت اسفناج', price: '185 T', image: '' },
-                { name: 'املت سوجوک', price: '252 T', image: '' },
-                { name: 'املت شکاری', price: '255 T', image: '' },
-                { name: 'املت گوشت', price: '287 T', image: '' },
-                { name: 'املت مرغ', price: '232 T', image: '' },
-                { name: 'املت بیکن', price: '247 T', image: '' },
-                { name: 'املت سالامی', price: '215 T', image: '' },
-                { name: 'املت خرما', price: '176 T', image: '' },
-                { name: 'املت تن‌ماهی', price: '196 T', image: '' },
+                { name: 'املت گوجه', price: '168 T', image: '' },
+                { name: 'املت گوجه اِسپایسی', price: '187 T', image: '' },
+                { name: 'املت اسفناج', price: '195 T', image: '' },
+                { name: 'املت سوجوک', price: '276 T', image: '' },
+                { name: 'املت پپرونی', price: '245 T', image: '' },
+                { name: 'املت اسفناج بیکن', price: '267 T', image: '' },
+                { name: 'املت شکاری', price: '278 T', image: '' },
+                { name: 'املت گوشت', price: '298 T', image: '' },
+                { name: 'املت مرغ', price: '253 T', image: '' },
+                { name: 'املت بیکن', price: '254 T', image: '' },
+                { name: 'املت سالامی', price: '238 T', image: '' },
+                { name: 'املت خرما', price: '184 T', image: '' },
+                { name: 'املت تن‌ماهی', price: '224 T', image: '' },
                 { name: 'املت بوقلمون', price: '263 T', image: '' },
-                { name: 'املت شاپوری', price: '192 T', image: '' },
-                { name: 'نیمرو', price: '130 T', image: '' },
-                { name: 'املت قارچ و خامه', price: '195 T', image: '' },
-                { name: 'املت سیب‌زمینی', price: '187 T', image: '' }
+                { name: 'املت شاپوری', price: '198 T', image: '' },
+                { name: 'نیمرو', price: '135 T', image: '' },
+                { name: 'املت قارچ و خامه', price: '227 T', image: '' },
+                { name: 'املت سیب‌زمینی', price: '192 T', image: '' }
             ],
             'Category 2': [
-                { name: 'لازانیا', price: '395 T', image: '' },
-                { name: 'کروسان بیکن تخم‌مرغ', price: '315 T', image: '' },
-                { name: 'تست فرانسوی', price: '320 T', image: '' },
-                { name: 'کروسان و بیکن', price: '305 T', image: '' }
+                { name: 'کروسان بیکن تخم‌مرغ', price: '325 T', image: '' },
+                { name: 'کروسان بیکن ', price: '315 T', image: '' },
+                { name: 'کروسان برگر', price: '385 T', image: '' },
+                { name: 'کروسان چیکن پستو', price: '297 T', image: '' },
+                { name: 'کروسان نوتلا', price: '276 T', image: '' }
+
+
             ],
             'Category 3': [
-                { name: 'سالاد سزار پاشا', price: '310 T', image: '' }
+                { name: 'برانچ میگو', price: '498 T', image: '' },
+                { name: 'چیکن پاشا', price: '392 T', image: '' },
+                { name: 'اسکرامبل اگ', price: '387 T', image: '' },
+                { name: 'گواکامولی بیکن', price: '425 T', image: '' },
+                { name: 'لازانیا', price: '425 T', image: '' },
+                { name: 'پاستا', price: '-', image: '' },
+
             ],
             'Category 4': [
-                { name: 'تن‌ماهی', price: '260 T', image: '' },
+                { name: 'تن‌ماهی', price: '282 T', image: '' },
                 { name: 'پستو مرغ', price: '295 T', image: '' },
-                { name: 'گوشت', price: '310 T', image: '' },
-                { name: 'بوقلمون', price: '280 T', image: '' },
+                { name: 'گوشت', price: '338 T', image: '' },
+                { name: 'بوقلمون', price: '286 T', image: '' },
                 { name: 'مرغ و اسنفاج', price: '295 T', image: '' },
-                { name: 'شکاری', price: '285 T', image: '' }
+                { name: 'شکاری', price: '292 T', image: '' },
+                { name: 'سیب سرخی', price: '189 T', image: '' }
+
             ],
             'Category 5': [
-                { name: 'خوراک زبان', price: '335 T', image: '' },
-                { name: 'خوراک جگر (استانبولی)', price: '320 T', image: '' },
-                { name: 'خوراک مرغ', price: '280 T', image: '' },
-                { name: 'خوراک گوشت', price: '325 T', image: '' },
-                { name: 'کباب تابه‌ای', price: '335 T', image: '' },
-                { name: 'لوبیا کباب', price: '292 T', image: '' },
-                { name: 'بشقاب رژیمی', price: '330 T', image: '' },
-                { name: 'جگر بره (دو نفره)', price: '435 T', image: '' }
+                { name: 'خوراک زبان', price: '395 T', image: '' },
+                { name: 'خوراک جگر (استانبولی)', price: '335 T', image: '' },
+                { name: 'خوراک مرغ', price: '298 T', image: '' },
+                { name: 'خوراک گوشت', price: '336 T', image: '' },
+                { name: 'کباب تابه‌ای', price: '345 T', image: '' },
+                { name: 'لوبیا کباب', price: '318 T', image: '' },
+                { name: 'بشقاب رژیمی', price: '338 T', image: '' },
+                { name: 'جگر بره (دو نفره)', price: '446 T', image: '' }
             ],
             'Category 6': [
+                { name: 'سالاد سزار پاشا', price: '328 T', image: '' }
+            ],
+            'Category 7': [
                 { name: 'چای', price: '-', image: '' },
                 { name: 'آبمیوه طبیعی', price: '-', image: '' },
                 { name: 'کوکا', price: '-', image: '' },
-                { name: 'ماشعیر', price: '-', image: '' }
+                { name: 'ماشعیر', price: '-', image: '' },
+                { name: 'اسموتی', price: '-', image: '' }
+
             ],
             // Add more categories and items as needed
         };
